@@ -1,0 +1,466 @@
+ * {
+   margin: 0;
+   padding: 0;
+   font-family: "poppins";
+ }
+
+ body,html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow-y: hidden; */
+ }
+
+ .logo {
+   position: relative;
+ }
+
+ .logo img {
+   margin-top: 20px;
+   margin-left: 15px;
+ }
+
+ .line {
+   border: 5px solid #4282CB;
+   width: 58%;
+   position: absolute;
+   top: 80px;
+   left: 515px;
+ }
+
+ .content {
+   display: flex;
+ }
+
+ .main-content h2 {
+   font-size: 2rem;
+   margin-top: 45px;
+   margin-left: 25px;
+ }
+
+
+ .main-content p {
+   font-size: 2rem;
+   margin-top: 45px;
+   margin-left: 25px;
+ }
+
+ .main-content .good {
+   margin-top: -5px;
+ }
+
+ .main-content span {
+   color: #4282CB;
+ }
+
+ .main-content input {
+   border-radius: 20px;
+   margin-left: 25px;
+   margin-top: 62px;
+   width: 77%;
+   padding: 6px;
+ }
+
+ .info .btn {
+   position: relative;
+   top: -34px;
+   left: 318px;
+   border-radius: 20px;
+   border: none;
+   padding-bottom: 10px;
+   width: 25%;
+   padding: 6px;
+   background-color: #4282CB;
+   color: white;
+
+ }
+
+ .icon {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .icon .icons {
+   margin-left: 5px;
+ }
+
+ .icons img {
+   margin-left: 30px;
+ }
+
+ .get-touch {
+   border: 2px solid none;
+   background-color: rgb(210, 200, 200);
+   margin-right: 150px;
+   height: 10%;
+ }
+
+ .get-touch a {
+   font-size: 2rem;
+   color: #F2EDED;
+   text-decoration: none;
+   line-height: 1;
+ }
+
+ .get-touch img {
+   vertical-align: middle;
+   margin-right: 10px;
+ }
+
+
+ .image-container {
+   position: relative;
+   /* Enables positioning for the pseudo-element */
+   display: inline-block;
+ }
+
+ .image {
+   position: relative;
+   z-index: 2;
+   /* Ensures the image appears above the shadow */
+   margin-left: 130px;
+   margin-top: 90px;
+ }
+
+ .image-container::before {
+   content: '';
+   /* Creates an empty element to act as the shadow */
+   position: absolute;
+   top: 10px;
+   /* Adjusts vertical position */
+   left: 10px;
+   /* Adjusts horizontal position */
+   width: 100%;
+   height: 100%;
+   background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+   /* Same image as the original */
+   background-size: cover;
+   /* Ensures the image fits the container */
+   opacity: 0.3;
+   /* Makes the shadow image less opaque */
+   z-index: 1;
+   /* Ensures the shadow is behind the original image */
+   transform: scale(1.05);
+   /* Slightly enlarges the shadow for a better effect */
+ }
+
+ /* body{
+  overflow-y: hidden;
+ } */
+
+
+
+ /* Responsive design */
+ @media screen and (max-width: 480px) {
+   body {
+     overflow-x: hidden;
+   }
+
+   .logo {
+     display: flex;
+   }
+
+   .logo img {
+     width: 50%;
+     /* Allow logo to scale down */
+     max-width: 500px;
+     /* Maintain original max width */
+     height: auto;
+     /* Maintain aspect ratio */
+     margin-left: 0;
+     /* Adjust left margin if needed */
+   }
+
+
+   .line {
+     width: 46%;
+     /* Make the line wider on smaller screens */
+     top: 40px;
+     /* Adjust top position */
+     left: 50%;
+     /* Center line */
+     margin: 0 auto;
+     /* Center the line */
+   }
+
+
+   .content {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .main-content input {
+     width: 92%;
+     /* Adjust input width */
+     margin: 20px auto;
+     font-size: 0.6rem;
+     /* Center align input */
+   }
+
+   .info .btn {
+     left: 62%;
+     /* Reset button positioning */
+     width: 35%;
+     /* Adjust button width */
+     margin: 0px auto;
+     top: -49px;
+     padding: 4px;
+     /* Center align button */
+   }
+
+   .image {
+     margin: 20px auto 0;
+     /* Move the image below */
+     display: block;
+     width: 80%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .main-content h2,
+   .main-content p {
+     font-size: 1.2rem;
+     margin-left: 0px;
+     text-align: left;
+     margin-top: 40px;
+   }
+
+   .icon {
+     flex-direction: row;
+     /* Stack icons and get in touch vertically */
+     align-items: center;
+     /* Center align items */
+   }
+
+   .icon .icons {
+     margin-left: 0;
+     /* Reset left margin */
+     margin-top: 55px;
+     /* Add spacing between icons and get in touch */
+   }
+
+   .icons img {
+     margin-left: 10px;
+     /* Reduce margin between icons */
+     height: 25px;
+     width: 25px;
+   }
+
+   .get-touch {
+     margin-right: 0;
+     /* Reset margin for the get in touch section */
+     text-align: center;
+     /* Center align the text */
+     padding: 0 0;
+     margin-top: 60px;
+     margin-bottom: 15px;
+     /* Add padding for better touch target */
+   }
+
+   .get-touch img {
+     height: 30px;
+     width: 30px;
+   }
+
+   .get-touch a {
+     font-size: 1.1rem;
+     /* Reduce font size for smaller screens*/
+   }
+
+ }
+
+ @media screen and (min-width: 481px) and (max-width: 767px) {
+   body {
+     overflow-x: hidden;
+   }
+
+   .logo {
+     display: flex;
+   }
+
+   .logo img {
+     width: 50%;
+     /* Allow logo to scale down */
+     max-width: 500px;
+     /* Maintain original max width */
+     height: auto;
+     /* Maintain aspect ratio */
+     margin-left: 0;
+     /* Adjust left margin if needed */
+   }
+
+
+   .line {
+     width: 46%;
+     /* Make the line wider on smaller screens */
+     top: 45px;
+     /* Adjust top position */
+     left: 50%;
+     /* Center line */
+     margin: 0 auto;
+     /* Center the line */
+   }
+
+   .content {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .main-content input {
+     width: 115%;
+     /* Adjust input width */
+     margin: 40px auto;
+     font-size: 0.8rem;
+     margin-left: -65px;
+     /* Center align input */
+   }
+
+   .info .btn {
+     left: 66%;
+     /* Reset button positioning */
+     width: 35%;
+     /* Adjust button width */
+     margin: 0px auto;
+     top: -75px;
+     padding: 7px;
+     /* Center align button */
+   }
+
+   .image {
+     margin: 20px auto 0;
+     /* Move the image below */
+     display: block;
+     width: 80%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .main-content h2,
+   .main-content p {
+     font-size: 1.6rem;
+     margin-left: -60px;
+     text-align: left;
+     margin-top: 40px;
+   }
+
+   .icon {
+     flex-direction: row;
+     /* Stack icons and get in touch vertically */
+     align-items: center;
+     /* Center align items */
+   }
+
+   .icon .icons {
+     margin-left: 0;
+     /* Reset left margin */
+     margin-top: 55px;
+     /* Add spacing between icons and get in touch */
+   }
+
+   .icons img {
+     margin-left: 10px;
+     /* Reduce margin between icons */
+     height: 35px;
+     width: 35px;
+   }
+
+   .get-touch {
+     margin-right: 0;
+     /* Reset margin for the get in touch section */
+     text-align: center;
+     /* Center align the text */
+     padding: 0 0;
+     margin-top: 60px;
+     margin-bottom: 15px;
+     /* Add padding for better touch target */
+   }
+
+   .get-touch img {
+     height: 35px;
+     width: 35px;
+   }
+
+   .get-touch a {
+     font-size: 1.2rem;
+     /* Reduce font size for smaller screens */
+   }
+
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+   body {
+     overflow-x: hidden;
+   }
+
+   .main-content input {
+     width: 96%;
+     /* Adjust input width */
+     margin: 40px auto;
+     font-size: 0.8rem;
+     /* Center align input */
+     margin-left: 10px;
+   }
+
+   .info .btn {
+     left: 71%;
+     /* Reset button positioning */
+     width: 33%;
+     /* Adjust button width */
+     margin: 0px auto;
+     top: -75px;
+     padding: 7px;
+     /* Center align button */
+   }
+
+
+   .image {
+     margin: 20px auto 0;
+     /* Move the image below */
+     display: block;
+     width: 80%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .image-container::before {
+     margin: 20px auto 0;
+     /* Move the image below */
+     display: block;
+     width: 80%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .main-content h2,
+   .main-content p {
+     font-size: 1.4rem;
+   }
+
+ }
+
+ @media screen and (min-width: 1025px) and (max-width: 1440px) {
+   body {
+     overflow-x: hidden;
+   }
+
+   .main-content input {
+     width: 90%;
+     /* Adjust input width */
+     margin: 40px auto;
+     font-size: 0.8rem;
+     /* Center align input */
+     margin-left: 10px;
+   }
+
+   .info .btn {
+     left: 71%;
+     /* Reset button positioning */
+
+     margin: 0px auto;
+     top: -75px;
+     padding: 7px;
+     /* Center align button */
+   }
+
+
+ }
