@@ -209,10 +209,10 @@
    }
 
    .image {
-     margin: 20px auto 0;
+     margin: 20px 28px 0;
      /* Move the image below */
      display: block;
-     width: 80%;
+     width: 90%;
      /* Adjust image width */
      height: auto;
    }
@@ -327,10 +327,10 @@
    }
 
    .image {
-     margin: 20px auto 0;
+     margin: 35px 45px 0;
      /* Move the image below */
      display: block;
-     width: 80%;
+     width: 90%;
      /* Adjust image width */
      height: auto;
    }
@@ -413,23 +413,40 @@
    }
 
 
-   .image {
-     margin: 20px auto 0;
-     /* Move the image below */
-     display: block;
-     width: 80%;
-     /* Adjust image width */
-     height: auto;
-   }
 
-   .image-container::before {
-     margin: 20px auto 0;
-     /* Move the image below */
-     display: block;
-     width: 80%;
-     /* Adjust image width */
-     height: auto;
-   }
+   .image-container {
+    position: relative;
+    display: block;
+    width: 80%; /* Adjust container width */
+    margin: 20px auto; /* Center the container */
+    padding: 15px; /* Add padding to accommodate shadow */
+    overflow: visible;
+  }
+
+  .image {
+    display: block;
+    width: 80%; /* Full width of the container for responsiveness */
+    height: auto;
+    position: relative;
+    z-index: 2; /* Keep image above shadow */
+    margin: 15px 15px 0 15px;
+  }
+
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Align shadow with the top of the container */
+    left: 0; /* Align shadow with the left of the container */
+    width: 80%; /* Increase width to ensure shadow doesn't cut off */
+    height: 80%; /* Increase height for shadow */
+    background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+    background-size: cover;
+    opacity: 0.3; /* Shadow opacity */
+    z-index: 1; /* Place shadow behind the image */
+    transform: scale(1.05); /* Slightly larger shadow for effect */
+    pointer-events: none; /* Allow clicks to pass through to the image */
+   
+  }
 
    .main-content h2,
    .main-content p {
