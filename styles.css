@@ -4,11 +4,11 @@
    font-family: "poppins";
  }
 
- body,html{
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  /* overflow-y: hidden; */
+ body,
+ html {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
  }
 
  .logo {
@@ -72,6 +72,7 @@
    padding: 6px;
    background-color: #4282CB;
    color: white;
+   cursor: pointer;
 
  }
 
@@ -144,16 +145,28 @@
    /* Slightly enlarges the shadow for a better effect */
  }
 
- /* body{
-  overflow-y: hidden;
- } */
 
 
 
  /* Responsive design */
  @media screen and (max-width: 480px) {
-   body {
-     overflow-x: hidden;
+
+   header {
+     width: 100%;
+     height: 100%;
+   }
+
+
+
+   main {
+     width: 100%;
+     height: 100%;
+   }
+
+   footer {
+     width: 100%;
+     height: 100%;
+
    }
 
    .logo {
@@ -169,6 +182,7 @@
      /* Maintain aspect ratio */
      margin-left: 0;
      /* Adjust left margin if needed */
+     margin-top: 2px;
    }
 
 
@@ -179,7 +193,7 @@
      /* Adjust top position */
      left: 50%;
      /* Center line */
-     margin: 0 auto;
+     margin: -22px auto;
      /* Center the line */
    }
 
@@ -198,23 +212,14 @@
    }
 
    .info .btn {
-     left: 62%;
+     left: 65%;
      /* Reset button positioning */
-     width: 35%;
-     /* Adjust button width */
-     margin: 0px auto;
-     top: -49px;
-     padding: 4px;
-     /* Center align button */
-   }
 
-   .image {
-     margin: 20px 28px 0;
-     /* Move the image below */
-     display: block;
-     width: 90%;
-     /* Adjust image width */
-     height: auto;
+     margin: 6px 16px;
+     top: -53px;
+     padding: 5px;
+     /* Center align button */
+     font-size: 0.6rem;
    }
 
    .main-content h2,
@@ -222,7 +227,7 @@
      font-size: 1.2rem;
      margin-left: 0px;
      text-align: left;
-     margin-top: 40px;
+     margin-top: 20px;
    }
 
    .icon {
@@ -230,12 +235,13 @@
      /* Stack icons and get in touch vertically */
      align-items: center;
      /* Center align items */
+     margin-top: -83px;
    }
 
    .icon .icons {
      margin-left: 0;
      /* Reset left margin */
-     margin-top: 55px;
+     margin-top: 90px;
      /* Add spacing between icons and get in touch */
    }
 
@@ -252,7 +258,7 @@
      text-align: center;
      /* Center align the text */
      padding: 0 0;
-     margin-top: 60px;
+     margin-top: 80px;
      margin-bottom: 15px;
      /* Add padding for better touch target */
    }
@@ -267,12 +273,71 @@
      /* Reduce font size for smaller screens*/
    }
 
+
+   .image-container {
+     margin-left: 60px;
+     margin-top: -30px;
+   }
+
+   .image {
+     width: 380px;
+     height: 300px;
+     margin-top: 40px;
+     margin-left: 80px;
+     margin: 0px -20px 0;
+     /* Move the image below */
+     display: block;
+     width: 90%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .image-container::before {
+     width: 400px;
+     height: 320px;
+     content: '';
+     position: absolute;
+     top: 0;
+     /* Align shadow with the top of the container */
+     left: 0;
+     /* Align shadow with the left of the container */
+     width: 90%;
+     /* Increase width to ensure shadow doesn't cut off */
+     height: 88%;
+     /* Increase height for shadow */
+     background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+     background-size: cover;
+     opacity: 0.3;
+     /* Shadow opacity */
+     z-index: 1;
+     /* Place shadow behind the image */
+     transform: scale(1.05);
+     /* Slightly larger shadow for effect */
+     pointer-events: none;
+     margin: -20px -35px 0;
+     /* Allow clicks to pass through to the image */
+   }
+
  }
 
  @media screen and (min-width: 481px) and (max-width: 767px) {
-   body {
-     overflow-x: hidden;
+
+   header {
+     width: 100%;
+     height: 100%;
    }
+
+   main {
+     width: 100%;
+     height: 100%;
+   }
+
+   footer {
+     width: 100%;
+     height: 100%;
+
+   }
+
 
    .logo {
      display: flex;
@@ -287,13 +352,14 @@
      /* Maintain aspect ratio */
      margin-left: 0;
      /* Adjust left margin if needed */
+     margin-top: 2px;
    }
 
 
    .line {
      width: 46%;
      /* Make the line wider on smaller screens */
-     top: 45px;
+     top: 30px;
      /* Adjust top position */
      left: 50%;
      /* Center line */
@@ -309,20 +375,18 @@
    .main-content input {
      width: 115%;
      /* Adjust input width */
-     margin: 40px auto;
+     margin: 15px auto;
      font-size: 0.8rem;
-     margin-left: -65px;
+     margin-left: -48px;
      /* Center align input */
    }
 
    .info .btn {
-     left: 66%;
+     left: 73%;
      /* Reset button positioning */
-     width: 35%;
-     /* Adjust button width */
-     margin: 0px auto;
-     top: -75px;
-     padding: 7px;
+     margin: 5px 26px;
+     top: -52px;
+     padding: 4px;
      /* Center align button */
    }
 
@@ -338,9 +402,9 @@
    .main-content h2,
    .main-content p {
      font-size: 1.6rem;
-     margin-left: -60px;
+     margin-left: -50px;
      text-align: left;
-     margin-top: 40px;
+     margin-top: 15px;
    }
 
    .icon {
@@ -348,6 +412,7 @@
      /* Stack icons and get in touch vertically */
      align-items: center;
      /* Center align items */
+     margin-top: -66px;
    }
 
    .icon .icons {
@@ -385,15 +450,82 @@
      /* Reduce font size for smaller screens */
    }
 
- }
-
- @media screen and (min-width: 768px) and (max-width: 1024px) {
-   body {
-     overflow-x: hidden;
+   .image-container {
+     margin-left: 300px;
+     margin-top: -45px;
    }
 
+   .image {
+     width: 380px;
+     height: 300px;
+     margin-top: 40px;
+     margin-left: 80px;
+     margin: 30px -150px 0;
+     /* Move the image below */
+     display: block;
+     width: 98%;
+     /* Adjust image width */
+     height: auto;
+   }
+
+   .image-container::before {
+     width: 400px;
+     height: 320px;
+     content: '';
+     position: absolute;
+     top: 0;
+     /* Align shadow with the top of the container */
+     left: 0;
+     /* Align shadow with the left of the container */
+     width: 90%;
+     /* Increase width to ensure shadow doesn't cut off */
+     height: 88%;
+     /* Increase height for shadow */
+     background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+     background-size: cover;
+     opacity: 0.3;
+     /* Shadow opacity */
+     z-index: 1;
+     /* Place shadow behind the image */
+     transform: scale(1.05);
+     /* Slightly larger shadow for effect */
+     pointer-events: none;
+     margin: 10px -160px 0;
+     /* Allow clicks to pass through to the image */
+   }
+
+ }
+
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+   header {
+     width: 100%;
+     height: 100%;
+   }
+
+   main {
+     width: 100%;
+     height: 100%;
+   }
+
+   footer {
+     width: 100%;
+     height: 100%;
+
+   }
+
+   .logo img {
+     margin-top: 2px;
+   }
+
+   .line {
+     top: 60px;
+   }
+
+
    .main-content input {
-     width: 96%;
+     width: 125%;
      /* Adjust input width */
      margin: 40px auto;
      font-size: 0.8rem;
@@ -402,81 +534,177 @@
    }
 
    .info .btn {
-     left: 71%;
+     left: 105%;
      /* Reset button positioning */
-     width: 33%;
+     width: 77px;
      /* Adjust button width */
-     margin: 0px auto;
-     top: -75px;
-     padding: 7px;
+     /* margin: 0px auto; */
+     top: -71px;
+     padding: 3px;
      /* Center align button */
    }
 
 
 
    .image-container {
-    position: relative;
-    display: block;
-    width: 80%; /* Adjust container width */
-    margin: 20px auto; /* Center the container */
-    padding: 15px; /* Add padding to accommodate shadow */
-    overflow: visible;
-  }
+     position: relative;
+     display: block;
+     width: 80%;
+     /* Adjust container width */
+     margin: 0px auto;
+     /* Center the container */
+     padding: 15px;
+     /* Add padding to accommodate shadow */
+     overflow: visible;
+   }
 
-  .image {
-    display: block;
-    width: 80%; /* Full width of the container for responsiveness */
-    height: auto;
-    position: relative;
-    z-index: 2; /* Keep image above shadow */
-    margin: 15px 15px 0 15px;
-  }
 
-  .image-container::before {
-    content: '';
-    position: absolute;
-    top: 0; /* Align shadow with the top of the container */
-    left: 0; /* Align shadow with the left of the container */
-    width: 80%; /* Increase width to ensure shadow doesn't cut off */
-    height: 80%; /* Increase height for shadow */
-    background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
-    background-size: cover;
-    opacity: 0.3; /* Shadow opacity */
-    z-index: 1; /* Place shadow behind the image */
-    transform: scale(1.05); /* Slightly larger shadow for effect */
-    pointer-events: none; /* Allow clicks to pass through to the image */
-   
-  }
+   .image {
+     display: block;
+     width: 80%;
+     /* Full width of the container for responsiveness */
+     height: auto;
+     position: relative;
+     z-index: 2;
+     /* Keep image above shadow */
+     margin: -10px 12px 0 85px;
+   }
+
+
+   .image-container::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     /* Align shadow with the top of the container */
+     left: 0;
+     /* Align shadow with the left of the container */
+     width: 80%;
+     /* Increase width to ensure shadow doesn't cut off */
+     height: 80%;
+     /* Increase height for shadow */
+     background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+     background-size: cover;
+     opacity: 0.3;
+     /* Shadow opacity */
+     z-index: 1;
+     /* Place shadow behind the image */
+     transform: scale(1.05);
+     /* Slightly larger shadow for effect */
+     pointer-events: none;
+     /* Allow clicks to pass through to the image */
+     margin: -10px 12px 0px 85px;
+   }
+
 
    .main-content h2,
    .main-content p {
-     font-size: 1.4rem;
+     font-size: 1.2rem;
+     margin-top: 20px;
+   }
+
+   .get-touch img {
+     height: 35px;
+     width: 35px;
+   }
+
+
+   .get-touch a {
+     font-size: 1.2rem;
+     /* Reduce font size for smaller screens */
+   }
+
+   .icons img {
+     margin-left: 10px;
+     /* Reduce margin between icons */
+     height: 35px;
+     width: 35px;
+   }
+
+   .icon {
+     margin-top: -20px;
    }
 
  }
 
+
  @media screen and (min-width: 1025px) and (max-width: 1440px) {
-   body {
-     overflow-x: hidden;
+   header {
+     width: 100%;
+     height: 100%;
+   }
+
+   main {
+     width: 100%;
+     height: 100%;
+   }
+
+   footer {
+     width: 100%;
+     height: 100%;
+
+   }
+
+   .logo img {
+     margin-top: 2px;
+   }
+
+   .line {
+     top: 60px;
    }
 
    .main-content input {
-     width: 90%;
+     width: 96%;
      /* Adjust input width */
      margin: 40px auto;
-     font-size: 0.8rem;
+     font-size: 1rem;
      /* Center align input */
      margin-left: 10px;
    }
 
-   .info .btn {
-     left: 71%;
-     /* Reset button positioning */
+   .image-container {
+     margin-left: 60px;
+   }
 
-     margin: 0px auto;
-     top: -75px;
-     padding: 7px;
-     /* Center align button */
+   .image {
+     width: 380px;
+     height: 300px;
+     margin-top: 40px;
+     margin-left: 80px;
+   }
+
+   .image-container::before {
+     width: 400px;
+     height: 320px;
+   }
+
+   .info {
+     position: relative;
+     /* Set relative positioning for absolute elements inside */
+   }
+
+   .info .btn {
+     position: absolute;
+     top: 43px;
+     /* Keep the existing top alignment */
+     left: auto;
+     /* Remove fixed left value */
+     right: 2%;
+     /* Align button to the right end of the input field with a small margin */
+     transform: translateX(15%);
+     /* Adjust horizontal position */
+     width: 85px;
+     /* Keep button width as provided */
+     padding: 6px;
+   }
+
+   .icon {
+     margin-top: 20px;
+   }
+
+   .main-content h2,
+   .main-content p {
+     font-size: 1.8rem;
+     margin-top: 50px;
    }
 
 
