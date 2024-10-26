@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    font-family: "poppins";
+   box-sizing: border-box;
  }
 
  body,
@@ -123,6 +124,7 @@
    margin-top: 90px;
  }
 
+
  .image-container::before {
    content: '';
    /* Creates an empty element to act as the shadow */
@@ -153,21 +155,24 @@
 
    header {
      width: 100%;
-     height: 100%;
+     height: auto;
    }
-
 
 
    main {
      width: 100%;
-     height: 100%;
+     height: auto;
    }
 
    footer {
      width: 100%;
-     height: 100%;
+     height: auto;
+     /* overflow: hidden; */
 
    }
+
+
+
 
    .logo {
      display: flex;
@@ -189,11 +194,11 @@
    .line {
      width: 46%;
      /* Make the line wider on smaller screens */
-     top: 40px;
+     top: 15px;
      /* Adjust top position */
      left: 50%;
      /* Center line */
-     margin: -22px auto;
+     margin: 0px auto;
      /* Center the line */
    }
 
@@ -201,6 +206,7 @@
    .content {
      flex-direction: column;
      align-items: center;
+     flex-direction: column;
    }
 
    .main-content input {
@@ -212,9 +218,8 @@
    }
 
    .info .btn {
-     left: 65%;
+     left: 60%;
      /* Reset button positioning */
-
      margin: 6px 16px;
      top: -53px;
      padding: 5px;
@@ -222,56 +227,16 @@
      font-size: 0.6rem;
    }
 
+
    .main-content h2,
    .main-content p {
-     font-size: 1.2rem;
-     margin-left: 0px;
      text-align: left;
-     margin-top: 20px;
+     margin-top: 20px; 
+     margin-left: 10px; 
+     font-size: 1rem;
    }
 
-   .icon {
-     flex-direction: row;
-     /* Stack icons and get in touch vertically */
-     align-items: center;
-     /* Center align items */
-     margin-top: -83px;
-   }
 
-   .icon .icons {
-     margin-left: 0;
-     /* Reset left margin */
-     margin-top: 90px;
-     /* Add spacing between icons and get in touch */
-   }
-
-   .icons img {
-     margin-left: 10px;
-     /* Reduce margin between icons */
-     height: 25px;
-     width: 25px;
-   }
-
-   .get-touch {
-     margin-right: 0;
-     /* Reset margin for the get in touch section */
-     text-align: center;
-     /* Center align the text */
-     padding: 0 0;
-     margin-top: 80px;
-     margin-bottom: 15px;
-     /* Add padding for better touch target */
-   }
-
-   .get-touch img {
-     height: 30px;
-     width: 30px;
-   }
-
-   .get-touch a {
-     font-size: 1.1rem;
-     /* Reduce font size for smaller screens*/
-   }
 
 
    .image-container {
@@ -318,23 +283,49 @@
      /* Allow clicks to pass through to the image */
    }
 
+   .icon{
+    overflow-wrap: wrap;
+   }
+
+  
+   .icons img{
+    height: 25px;
+    width: 25px;
+    margin-left: 4px;
+   }
+
+   .get-touch a{
+    font-size: 1rem;
+   }
+
+   .get-touch img{
+    height: 25px;
+    width: 25px;
+   }
+
+   .get-touch{
+    margin-right: 15px;
+   }
+
  }
+
+
 
  @media screen and (min-width: 481px) and (max-width: 767px) {
 
    header {
      width: 100%;
-     height: 100%;
+     height: auto;
    }
 
    main {
      width: 100%;
-     height: 100%;
+     height: auto;
    }
 
    footer {
      width: 100%;
-     height: 100%;
+     height: auto;
 
    }
 
@@ -382,7 +373,7 @@
    }
 
    .info .btn {
-     left: 73%;
+     left: 68%;
      /* Reset button positioning */
      margin: 5px 26px;
      top: -52px;
@@ -430,7 +421,7 @@
    }
 
    .get-touch {
-     margin-right: 0;
+     margin-right: 20px;
      /* Reset margin for the get in touch section */
      text-align: center;
      /* Center align the text */
@@ -523,26 +514,23 @@
      top: 60px;
    }
 
-
    .main-content input {
-     width: 125%;
-     /* Adjust input width */
-     margin: 40px auto;
-     font-size: 0.8rem;
-     /* Center align input */
-     margin-left: 10px;
-   }
+    width: 240%; /* Adjust width for better fit */
+    margin-left: auto; /* Center the input */
+    margin-right: auto;
+    max-width: 195%; /* Center the input */
+    font-size: 0.7rem;
+  }
 
-   .info .btn {
-     left: 105%;
-     /* Reset button positioning */
-     width: 77px;
-     /* Adjust button width */
-     /* margin: 0px auto; */
-     top: -71px;
-     padding: 3px;
-     /* Center align button */
-   }
+  .info .btn {
+    left: 173%; /* Center button */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 38%;
+    padding: 6px;
+    font-size: 0.6rem;
+    top: -31px; /* Adjust width for better fit */
+  }
+ 
 
 
 
@@ -598,8 +586,10 @@
 
    .main-content h2,
    .main-content p {
-     font-size: 1.2rem;
-     margin-top: 20px;
+     font-size: 1.5rem;
+     margin-top: 35px;
+     margin-left: 20px;
+     margin-right: -260px;
    }
 
    .get-touch img {
@@ -621,8 +611,24 @@
    }
 
    .icon {
-     margin-top: -20px;
+     margin-top: 40px;
    }
+
+   .image {
+    width: 380px;
+    height: 300px;
+    margin-top: 40px;
+    margin-left: 220px;
+  }
+
+  .image-container::before {
+    width: 400px;
+    height: 320px;
+    margin-left: 200px;
+  }
+
+
+
 
  }
 
@@ -690,7 +696,7 @@
      /* Remove fixed left value */
      right: 2%;
      /* Align button to the right end of the input field with a small margin */
-     transform: translateX(15%);
+     transform: translateX(-3%);
      /* Adjust horizontal position */
      width: 85px;
      /* Keep button width as provided */
@@ -709,3 +715,108 @@
 
 
  }
+
+
+ @media screen and (min-width: 480px) and (max-width: 600px) {
+
+  .image {
+    width: 280px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin: 30px -150px 0;
+    /* Move the image below */
+    display: block;
+   
+    /* Adjust image width */
+    height: auto;
+   
+  }
+
+  .image-container::before {
+    width: 300px;
+    height: 220px;
+    content: '';
+    position: absolute;
+    top: 0;
+    /* Align shadow with the top of the container */
+    left: 0;
+    /* Align shadow with the left of the container */
+  
+    /* Increase height for shadow */
+    background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+    background-size: cover;
+    opacity: 0.3;
+    /* Shadow opacity */
+    z-index: 1;
+    /* Place shadow behind the image */
+    transform: scale(1.05);
+    /* Slightly larger shadow for effect */
+    pointer-events: none;
+    margin: 10px -160px 0;
+    /* Allow clicks to pass through to the image */
+  }
+
+ .image-container{
+  position: relative;
+  margin-left: -5px;
+ }
+
+ .icon{
+  margin-top: -64px;
+ }
+
+ }
+
+
+ @media screen and (max-width: 480px){
+
+  .image {
+    width: 280px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin: 30px -150px 0;
+    /* Move the image below */
+    display: block;
+    height: auto;
+  }
+
+  .image-container::before {
+    width: 300px;
+    height: 220px;
+    content: '';
+    position: absolute;
+    top: 0;
+    /* Align shadow with the top of the container */
+    left: 0;
+    /* Align shadow with the left of the container */
+  
+    /* Increase height for shadow */
+    background-image: url('images/87cc65fd08599c08364f4008034173bf-removebg-preview.png');
+    background-size: cover;
+    opacity: 0.3;
+    /* Shadow opacity */
+    z-index: 1;
+    /* Place shadow behind the image */
+    transform: scale(1.05);
+    /* Slightly larger shadow for effect */
+    pointer-events: none;
+    margin: 10px -160px 0;
+    /* Allow clicks to pass through to the image */
+  }
+
+ .image-container{
+  position: relative;
+  margin-left: -5px;
+  margin-top: -22px;
+ }
+
+ .icon{
+  margin-top: 45px;
+ }
+
+}
+
+
+
